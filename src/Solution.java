@@ -10,7 +10,6 @@ public class Solution {
         int[] arr = {1,2,10,20,5,30,20,30};
         System.out.println("(1) Sum of All Elemnts: "+SumOfAllElements(arr));
         System.out.println("(2) Largest Element: "+getMax(arr));
-        System.out.println("(2.1) Second Largest Element: "+getSecondLargest(arr));
         EvenOrOdd(arr,5);
         ReverseArray(arr);
         System.out.println("(5) Factorial using Loop: "+FactoralCalculation(5));
@@ -54,9 +53,18 @@ public class Solution {
             System.out.print(st2[i]+" ");
         }
         System.out.println();
-        System.out.println("(19) Armsrong Number: "+ArmstrongNumber(153));
+        System.out.println("(19) Armstrong Number: "+ArmstrongNumber(153));
         int[] ar2 = MaximumAndMinimumValue(arr);
         System.out.print("(20) Maximum value is: "+ar2[0]+" and "+"Minimum value is: "+ar2[1]);
+        System.out.println();
+        System.out.println("(21) Simple Interest is: "+SimpleInterest(120000,7,2));
+        double[] ar = ConvertTemperature(40.0, 100.0);
+        System.out.println("(22) Fahrenheit to Celsius: "+ar[0]+" and "+"Celsius to Fahrenheit: "+ar[1]);
+        System.out.print("(23) Character Check: ");
+        CheckCharacter('5');
+        System.out.println("(24) Second Largest Element: "+getSecondLargest(arr));
+        String s = "abs5kj6";
+        System.out.println("(25) Sum Of All numbers in a String: "+SumOfNumbersInString(s));
     }
 
     public static int SumOfAllElements(int[] arr){
@@ -74,16 +82,6 @@ public class Solution {
             }
         }
         return maxx;
-    }
-    public static int getSecondLargest(int[] arr){
-        int max2 = getMax(arr);
-        int max3 = arr[0];
-        for(int i=1;i<arr.length;i++){
-            if(max3<arr[i] && arr[i] < max2){
-                max3 = arr[i];
-            }
-        }
-        return max3;
     }
     public static void EvenOrOdd(int[] arr , int num){
         if(num % 2 == 0){
@@ -342,5 +340,54 @@ public class Solution {
         ar2[0] = max;
         ar2[1] = min;
         return ar2;
+    }
+    public static float SimpleInterest(float pricipal, float rate_of_interest, float time){
+        float simple_interest;
+        simple_interest = (pricipal * rate_of_interest * time) / 100;
+        return simple_interest;
+    }
+    public static double[] ConvertTemperature(double cels, double fht){
+        double c,f;
+        double[] ar = new double[2];
+        c = ((fht - 32) * 5) / 9;
+        ar[0] = c;
+        f = ((cels * 9) / 5) + 32;
+        ar[1] = f;
+        return ar;
+    }
+    public static void CheckCharacter(char ch){
+        if(ch >= 65 && ch <= 90)
+            System.out.println("Uppercase letter");
+        else if(ch >= 97 && ch <= 122)
+            System.out.println("Lowercase letter");
+        else if(ch >= 48 && ch <= 57)
+            System.out.println("It is a digit");
+        else
+            System.out.println("Special Character");
+    }
+    public static int getSecondLargest(int[] arr){
+        int max2 = getMax(arr);
+        int max3 = arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(max3<arr[i] && arr[i] < max2){
+                max3 = arr[i];
+            }
+        }
+        return max3;
+    }
+    public static int SumOfNumbersInString(String str){
+        String temp = "0";
+        int sum = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isDigit(ch))
+                temp = temp + ch;
+            else {
+                sum += Integer.parseInt(temp);
+                temp = "0";
+            }
+        }
+        return sum + Integer.parseInt(temp);
     }
 }
