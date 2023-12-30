@@ -1,2 +1,27 @@
 # Java-Solutions
-Some basic problem solutions using java
+25 problems solution using Java:
+1. Sum of Array Elements: Write a program to find the sum of all elements in an array.
+2. Largest Element in Array: Find and print the largest element in an array.
+3. Even or Odd Numbers: Check if a given number is even or odd using if-else. (also count in an array)
+4. Reverse an Array: Reverse the elements of an array.
+5. Factorial Calculation: Write a program to calculate the factorial of a given number. (normal solution + recursive solution)
+6. Palindrome Check: Check if a given string is a palindrome.
+7. Prime Number Check: Determine whether a given number is prime.
+8. Fibonacci Series: Generate and print the first N elements of the Fibonacci series. (normal solution + recursive solution)
+9. Linear Search: Implement a linear search algorithm to find an element in an array. (true or false return type)
+10. Binary Search: Implement binary search for a sorted array. 
+11. Duplicate Elements: Find and print duplicate elements in an array. (true or false return type)
+12. Count Vowels and Consonants: Count the number of vowels and consonants in a given string.
+13. Multiplication Table: Print the multiplication table for a given number.
+14. Matrix Addition: Add two matrices and print the result. 5x5 5x5 (return 2d array)
+15. Calculate Average: Calculate the average of elements in an array.
+16. Leap Year Check: Determine whether a given year is a leap year.
+17. Pattern Printing: Print a pattern (e.g., a pyramid) using loops.
+18. String Reversal: Reverse a given string without using built-in functions. apple, elppa
+19. Armstrong Number: Check if a number is an Armstrong number.
+20. Find Minimum and Maximum: Write a program to find the minimum and maximum values in an array.
+21. Calculate the simple interest for given principal, rate of interest, and time.
+22. Write a program to convert temperatures from Celsius to Fahrenheit and vice versa.
+23. Write a program that checks whether the input character is an uppercase letter, lowercase letter, a digit, or a special 24. character.
+24. Write a program to find the second largest number in a given array.
+25. Given a string containing both letters and numbers, find the sum of all the numbers in the string.
